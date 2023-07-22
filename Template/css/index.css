@@ -6,25 +6,40 @@ header {
     margin: 0 auto;
     display: inline-flex;
     border: 10px black;
+    width: 100%;
     
 }
 
 header h1 {
     justify-content: center;
+    padding-left: 1em;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
 }
 
 header ul {
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: right;
-    align-items: center;
+    align-items: end;
+    width: 100%;
+    padding: 1em;
+    color:black;
+    font-size:larger;
+
 }
 
 #banner {
     display: flex;
     justify-content: center;
-    background-image: url("../../Media/Pictures/Uhuru Peak.jpg");
+    background-image: url("../../Media/Pictures/Uhuru\ Peak.jpg");
     background-position: top;
     background-size: cover;
-    height: 1000px
+    height: inherit;
+    min-height: 1000px;
 }
 
 #banner h1 {
@@ -33,10 +48,13 @@ header ul {
 }
 
 #Hobbies {
-    margin: auto;
+    margin: 1em auto;
     width: 50%;
     padding: 1em;
     border: 5px solid grey;
+    background-color: grey;
+    border-radius: 1em;
+    color: aliceblue;
 }
 
 #Hobbies h1 {
@@ -45,24 +63,39 @@ header ul {
 }
 
 #Projects {
-
+    text-align: center;
 }
 
 .spacer {
     margin: 2em;
     display: inline-flex;
     justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 3em;
+    width: 80%
 }
 
 .container {
-    border: 4px solid green;
-    margin: 2em;
-    align-items: center;
-    justify-items: center;
+    border: 4px solid navy;
+    border-radius: 1em;
+    margin: 1px 2em 2em 2em;
+    background-color: white;
+    width: 300px;
+    height: 130px;
+    
 }
 
 #Goals {
+    text-align: center;
+}
 
+.journeys {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Iceland-2018 {
+    max-width: 100px;
 }
 
 footer {
