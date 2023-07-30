@@ -103,19 +103,128 @@
                 </script>
             </div>
             <div id="Student">
-
+                <h2>Studentertiden</h2>
+                <script>
+                    // Step 1: Get a reference to the image-gallery div
+                    const imageGallery = document.getElementById("Student");
+            
+                    // Step 2: Define the path to the folder where images are stored on the server
+                    const folderPath = "./Media/Pictures/Student";
+            
+                    // Step 3: Fetch the list of image filenames from the server
+                    fetch(folderPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                        .then(response => response.json())
+                        .then(imageFiles => {
+                            // Step 4: Loop through the image filenames and create <img> elements
+                            imageFiles.forEach(imageFile => {
+                                const imgElement = document.createElement("img");
+                                imgElement.src = folderPath + imageFile;
+                                imgElement.alt = "Photo";
+                                imgElement.width = 400;
+                                imageGallery.appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => console.error("Error fetching images:", error));
+                </script>
             </div>
-            <div id="Iceland 2022">
+            <div id="Iceland-2022">
                 <h2>Iceland 2022</h2>
-                <?php include "./Template/php/Iceland-2022"; ?>
+                <script>
+                    // Step 1: Get a reference to the image-gallery div
+                    const imageGallery = document.getElementById("Iceland-2022");
+            
+                    // Step 2: Define the path to the folder where images are stored on the server
+                    const folderPath = "./Media/Pictures/Iceland-2022";
+            
+                    // Step 3: Fetch the list of image filenames from the server
+                    fetch(folderPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                        .then(response => response.json())
+                        .then(imageFiles => {
+                            // Step 4: Loop through the image filenames and create <img> elements
+                            imageFiles.forEach(imageFile => {
+                                const imgElement = document.createElement("img");
+                                imgElement.src = folderPath + imageFile;
+                                imgElement.alt = "Photo";
+                                imgElement.width = 400;
+                                imageGallery.appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => console.error("Error fetching images:", error));
+                </script>
             </div>
             <div id="Kilimanjaro">
                 <h2>Kilimanjaro 2022</h2>
-                <?php include "./Template/php/Kilimanjaro"; ?>
+                <script>
+                    // Step 1: Get a reference to the image-gallery div
+                    const imageGallery = document.getElementById("Kilimanjaro");
+            
+                    // Step 2: Define the path to the folder where images are stored on the server
+                    const folderPath = "./Media/Pictures/Kilimanjaro";
+            
+                    // Step 3: Fetch the list of image filenames from the server
+                    fetch(folderPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                        .then(response => response.json())
+                        .then(imageFiles => {
+                            // Step 4: Loop through the image filenames and create <img> elements
+                            imageFiles.forEach(imageFile => {
+                                const imgElement = document.createElement("img");
+                                imgElement.src = folderPath + imageFile;
+                                imgElement.alt = "Photo";
+                                imgElement.width = 400;
+                                imageGallery.appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => console.error("Error fetching images:", error));
+                </script>
             </div>
-            <div id="Iceland 2023">
+            <div id="Iceland-2023">
                 <h2>Iceland with The Boys</h2>
-                <?php include "./Template/php/Iceland-2023"; ?>
+                <script>
+                    // Step 1: Get a reference to the image-gallery div
+                    const imageGallery = document.getElementById("Iceland-2023");
+            
+                    // Step 2: Define the path to the folder where images are stored on the server
+                    const folderPath = "./Media/Pictures/Iceland-2023";
+            
+                    // Step 3: Fetch the list of image filenames from the server
+                    fetch(folderPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                        .then(response => response.json())
+                        .then(imageFiles => {
+                            // Step 4: Loop through the image filenames and create <img> elements
+                            imageFiles.forEach(imageFile => {
+                                const imgElement = document.createElement("img");
+                                imgElement.src = folderPath + imageFile;
+                                imgElement.alt = "Photo";
+                                imgElement.width = 400;
+                                imageGallery.appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => console.error("Error fetching images:", error));
+                </script>
             </div>
         </div>
         <footer>
