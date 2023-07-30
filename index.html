@@ -27,9 +27,6 @@
                 <li>Make Food</li>
                 <li>Go Hiking</li>
             </ul>
-            <section class="gallery">
-                <img src=""
-            </section>
         </div>
         <div id="Projects">
             <h1>Projects</h1>
@@ -75,13 +72,13 @@
                 <h2>Iceland 2018</h2>
                 <script>
                     // Step 1: Get a reference to the image-gallery div
-                    const imageGallery = document.getElementById("Iceland-2018");
+                    const galleryeighteen = document.getElementById("Iceland-2018");
             
                     // Step 2: Define the path to the folder where images are stored on the server
-                    const folderPath = "Media\Pictures\Iceland-2018";
+                    const pathfoldereighteen = "Media/Pictures/Iceland-2018";
             
                     // Step 3: Fetch the list of image filenames from the server
-                    fetch(folderPath)
+                    fetch(pathfoldereighteen)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
@@ -93,10 +90,10 @@
                             // Step 4: Loop through the image filenames and create <img> elements
                             imageFiles.forEach(imageFile => {
                                 const imgElement = document.createElement("img");
-                                imgElement.src = folderPath + imageFile;
+                                imgElement.src = pathfoldereighteen + imageFile;
                                 imgElement.alt = "Photo";
                                 imgElement.width = 400;
-                                imageGallery.appendChild(imgElement);
+                                galleryeighteen.appendChild(imgElement);
                             });
                         })
                         .catch(error => console.error("Error fetching images:", error));
@@ -202,7 +199,7 @@
                     const imageGallery = document.getElementById("Iceland-2023");
             
                     // Step 2: Define the path to the folder where images are stored on the server
-                    const folderPath = "Media\Pictures\Iceland-2023";
+                    const folderPath = "./Media/Pictures/Iceland-2023";
             
                     // Step 3: Fetch the list of image filenames from the server
                     fetch(folderPath)
