@@ -4,15 +4,20 @@ body {
 
 header {
     margin: 0 auto;
-    display: inline-flex;
-    border: 10px black;
-    width: 100%;
+    display: flex;
+    border: 10px solid #000000;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
 header h1 {
+    margin: 0;
+}
+
+#logo {
     justify-content: center;
-    padding-left: 1em;
 }
 
 header a {
@@ -21,14 +26,17 @@ header a {
 }
 
 header ul {
+    list-style: none;
     display: flex;
-    flex-flow: column nowrap;
+    gap: 1em;
+    margin: 0;
+    /* flex-flow: column nowrap;
     justify-content: right;
     align-items: end;
     width: 100%;
     padding: 1em;
     color:black;
-    font-size:larger;
+    font-size:larger; */
 
 }
 
@@ -36,7 +44,7 @@ header ul {
     display: flex;
     margin: 0 auto;
     justify-content: center;
-    background-image: url("../../Media/Pictures/Uhuru\ Peak.jpg");
+    background-image: url("../../Media/Pictures/Kilimanjaro/Uhuru\ Peak.jpg");
     background-position:center;
     background-size: cover;
     height: inherit;
