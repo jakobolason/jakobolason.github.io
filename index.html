@@ -73,40 +73,49 @@
             <h1>My Journeys</h1>
             <div id="Iceland-2018">
                 <h2>Iceland 2018</h2>
-                <img src="./Media/Pictures/Iceland 2018/20190713_140111.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190717_170752.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190718_195859.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190721_134044.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190721_134054.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190721_191314.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190721_194250.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190723_141348.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190723_150953.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190724_164701.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190724_164709.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2018/20190725_111744 (1).jpg" width="400px">
+                <script>
+                    // Step 1: Get a reference to the image-gallery div
+                    const imageGallery = document.getElementById("Iceland-2018");
+            
+                    // Step 2: Define the path to the folder where images are stored on the server
+                    const folderPath = "./Media/Pictures/Iceland-2018";
+            
+                    // Step 3: Fetch the list of image filenames from the server
+                    fetch(folderPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                        .then(response => response.json())
+                        .then(imageFiles => {
+                            // Step 4: Loop through the image filenames and create <img> elements
+                            imageFiles.forEach(imageFile => {
+                                const imgElement = document.createElement("img");
+                                imgElement.src = folderPath + imageFile;
+                                imgElement.alt = "Photo";
+                                imgElement.width = 400;
+                                imageGallery.appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => console.error("Error fetching images:", error));
+                </script>
             </div>
             <div id="Student">
 
             </div>
             <div id="Iceland 2022">
                 <h2>Iceland 2022</h2>
-                <img src="./Media/Pictures/Iceland 2022/20220723_125022.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2022/20220724_130449.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2022/20220724_150956.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2022/20220725_131616.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2022/20220726_111728.jpg" width="400px">
-                <img src="./Media/Pictures/Iceland 2022/20220726_171939.jpg" width="400px">
+                <?php include "./Template/php/Iceland-2022"; ?>
             </div>
             <div id="Kilimanjaro">
                 <h2>Kilimanjaro 2022</h2>
-                <img src="./Media/Pictures/Kilimanjaro/20230204_115825.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230205_071444.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230205_140150.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230205_145255.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230206_091442.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230207_112303.jpg" width="400px">
-                <img src="./Media/Pictures/Kilimanjaro/20230216_190225.jpg" width="400px">
+                <?php include "./Template/php/Kilimanjaro"; ?>
+            </div>
+            <div id="Iceland 2023">
+                <h2>Iceland with The Boys</h2>
+                <?php include "./Template/php/Iceland-2023"; ?>
             </div>
         </div>
         <footer>
@@ -114,9 +123,8 @@
             <ul>
                 <li>Email: Jakobolason@gmail.com</li>
                 <li>Phone: +45 23643173</li>
-
             </ul>
         </footer>
 
     </body>
-</html
+</html>
