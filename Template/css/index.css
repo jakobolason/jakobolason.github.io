@@ -1,11 +1,12 @@
 body {
+    background-color: #f9f5e8;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header {
     margin: 0 auto;
     display: flex;
-    border: 10px solid #000000;
+    border: 6px double navy; 
     padding: 1em;
     justify-content: space-between;
     align-items: center;
@@ -30,13 +31,10 @@ header ul {
     display: flex;
     gap: 1em;
     margin: 0;
-    /* flex-flow: column nowrap;
-    justify-content: right;
-    align-items: end;
-    width: 100%;
     padding: 1em;
     color:black;
-    font-size:larger; */
+    font-size: 1.5em;
+    font-style: bold;
 
 }
 
@@ -89,7 +87,7 @@ header ul {
     border: 4px solid navy;
     border-radius: 1em;
     margin: 1px 2em 2em 2em;
-    background-color: white;
+    background-color: #f9f5e8;;
     width: 300px;
     height: 130px;
     
@@ -109,6 +107,18 @@ header ul {
 }
 
 footer {
-    background-color: rgb(34, 49, 34);
-    color:aliceblue;
-}
+    background-color: #283b5b;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
