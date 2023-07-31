@@ -97,7 +97,7 @@ header ul {
     text-align: center;
 }
 
-.journeys {
+#journeys {
     display: flex;
     flex-flow: row wrap;
 }
