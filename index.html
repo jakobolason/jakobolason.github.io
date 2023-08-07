@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./Template/css/index.css">
     </head>
     <body>
-        <header>
+        <header id="myHeader">
             <div id="logo">
                 <h1>Jakob Olason</h1>
             </div>
@@ -17,7 +17,7 @@
             </ul>
         </header>
         <div id="banner">
-            <h1>Insert Text For Welcome</h1>
+            <h1></h1>
         </div>
         <div id="Hobbies">
             <h1>Hobbies</h1>
@@ -33,7 +33,7 @@
         <div id="Projects">
             <h1>Projects</h1>
             <p>I have made some fun small projects. The most significant was my GmailClean app, which I 
-                have thought of making for a long time</p>
+                had thought of making for a long time</p>
             <div class="spacer">
                 <div class="container">
                     <h2><a href="https://github.com/jakobolason/Gmail-cleaning-service-browser">GmailClean</a></h2>
@@ -61,6 +61,30 @@
                 </div>
             </div>
         </div>
+        <script>
+            const initialHeight = 5;
+            const finalHeight = 40;
+            window.addEventListener('scroll', function(){
+                // Calculate the scroll position relative to the threshold
+                const scrollPosition = window.pageYOffset;
+                const threshold = 200; // Adjust this value to your needs
+                
+                if (scrollPosition > threshold) {
+                    // Calculate the animation progress
+                    const progress = (scrollPosition - threshold) / (window.innerHeight - threshold);
+            
+                    // Apply the animation progress to adjust header properties
+                    const header = document.querySelector('myHeader');
+                    header.style.height = `${initialHeight - (initialHeight - finalHeight) * progress}px`;
+                    header.style.opacity = 1 - progress;
+                } else {
+                    // Reset header properties if below the threshold
+                    const header = document.querySelector('myHeader');
+                    header.style.height = `${initialHeight}px`;
+                    header.style.opacity = 1;
+                }
+            });
+        </script>
         <div id="journeys">
             <h1>My Journeys</h1>
             <div id="Iceland-2018">
